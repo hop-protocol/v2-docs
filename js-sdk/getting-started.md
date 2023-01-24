@@ -412,6 +412,51 @@ async function main() {
 main().catch(console.error)
 ```
 
+## Get Events
+
+> Get decoded events for hub and spoke contracts.
+
+Method: `getEvents`
+
+### Parameters
+
+|Name|Type|Description|Example|
+|----|----|-----------|-------|
+|`eventNames`|`string[]`|List of event names to fetch. Options are: `["BundleCommitted","BundleForwarded","BundleReceived","BundleSet","FeesSentToHub","MessageBundled","MessageRelayed","MessageReverted","MessageSent"]`|eg. `["MessageSent", "MessageBundled"]`|
+|`chainId`|`number`|Chain ID|eg. `420`|
+|`fromBlock`|`number`|From block number|eg. `4554675`|
+|`toBlock`|`number`|To block number|eg. `4555675`|
+
+### Response
+
+|Name|Type|Description|Example|
+|----|----|-----------|-------|
+|`events`|`object[]`|Event logs|eg. `[{"eventName": "MessageSent", ... }]`|
+
+### Example
+
+```ts
+import { Hop } from '@hop-protocol/v2-sdk'
+
+async function main() {
+  const eventNames = ["MessageSent", "MessageBundled"]
+  const chainId = 420
+  const fromBlock = 4554675
+  const toBlock = 4555675
+
+  const hop = new Hop('goerli')
+  const events = await hop.getEvents({
+    eventNames,
+    chainId,
+    fromBlock,
+    toBlock
+  })
+  console.log(events)
+}
+
+main().catch(console.error)
+```
+
 ## Set Contract Addresses
 
 > Set contract addresses config for sdk
