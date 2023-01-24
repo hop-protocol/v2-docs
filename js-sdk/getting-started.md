@@ -412,6 +412,86 @@ async function main() {
 main().catch(console.error)
 ```
 
+## Set Contract Addresses
+
+> Set contract addresses config for sdk
+
+Method: `setContractAddresses`
+
+### Parameters
+
+|Name|Type|Description|Example|
+|----|----|-----------|-------|
+|`chainId`|`number`|Chain ID of messenger contract.|eg. `420`|
+|`startBlock`|`number`|Block contract was deployed at. This is used as start block when fetching events.|eg. `420`|
+|`spokeCoreMessenger`|`string`|The address of the SpokeCoreMessenger contract.|eg. `0xE3F4c0B210E7008ff5DE92ead0c5F6A5311C4FDC`|
+
+### Response
+
+<em>void</em>
+
+### Example
+
+```ts
+import { Hop } from '@hop-protocol/v2-sdk'
+
+async function main() {
+  const contractAddresses = {
+  "5": {
+    "chainId": 5,
+    "startBlock": 8095954,
+    "hubCoreMessenger": "0xE3F4c0B210E7008ff5DE92ead0c5F6A5311C4FDC",
+    "spokeCoreMessenger": "0xE3F4c0B210E7008ff5DE92ead0c5F6A5311C4FDC",
+    "ethFeeDistributor": "0xf6eED903Ac2A34E115547874761908DD3C5fe4bf"
+  },
+  "420": {
+    "chainId": 420,
+    "startBlock": 3218800,
+    "spokeCoreMessenger": "0xeA35E10f763ef2FD5634dF9Ce9ad00434813bddB",
+    "connector": "0x6be2E6Ce67dDBCda1BcdDE7D2bdCC50d34A7eD24"
+  }
+}
+
+  const hop = new Hop('goerli')
+  hop.setContractAddresses(contractAddresses)
+}
+
+main().catch(console.error)
+```
+
+## Get Contract Addresses
+
+> Get hub and spoke contract addresses sdk is using.
+
+Method: `getContractAddresses`
+
+### Parameters
+
+<em>None</em>
+
+### Response
+
+|Name|Type|Description|Example|
+|----|----|-----------|-------|
+|----|----|-----------|-------|
+|`chainId`|`number`|Chain ID of messenger contract.|eg. `420`|
+|`startBlock`|`number`|Block contract was deployed at. This is used as start block when fetching events.|eg. `420`|
+|`spokeCoreMessenger`|`string`|The address of the SpokeCoreMessenger contract.|eg. `0xE3F4c0B210E7008ff5DE92ead0c5F6A5311C4FDC`|
+
+### Example
+
+```ts
+import { Hop } from '@hop-protocol/v2-sdk'
+
+async function main() {
+  const hop = new Hop('goerli')
+  const contractAddresses = await hop.getContractAddresses()
+  console.log(contractAddresses)
+}
+
+main().catch(console.error)
+```
+
 ### More examples
 
 If you'd like to see more examples or have any feedback, message us on [Discord](https://discord.gg/PwCF88emV4)!
