@@ -492,6 +492,41 @@ async function main() {
 main().catch(console.error)
 ```
 
+## Set RPC Providers
+
+> Set custom RPC Providers config
+
+Method: `setRpcProviders`
+
+### Parameters
+
+|Name|Type|Description|Example|
+|----|----|-----------|-------|
+|`<chainId>`|`string`|Chain ID|eg. `"420"`|
+|`<rpcUrl>`|`string`|RPC URL|eg. `"https://goerli.optimism.io"`|
+
+### Response
+
+<em>void</em>
+
+### Example
+
+```ts
+import { Hop } from '@hop-protocol/v2-sdk'
+
+async function main() {
+  const rpcProviders = {
+  "5": "https://goerli.infura.io/v3/84842078b09946638c03157f83405213",
+  "420": "https://goerli.optimism.io"
+}
+
+  const hop = new Hop('goerli')
+  hop.setRpcProviders(rpcProviders)
+}
+
+main().catch(console.error)
+```
+
 ### More examples
 
 If you'd like to see more examples or have any feedback, message us on [Discord](https://discord.gg/PwCF88emV4)!
