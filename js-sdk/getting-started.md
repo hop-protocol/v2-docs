@@ -321,7 +321,7 @@ import { Hop } from '@hop-protocol/v2-sdk'
 
 async function main() {
   const fromChainId = 420
-  const messageId = ""
+  const messageId = "0xf672a68db7ebbac6e28bc217967a83d5fc63f0f185a9c25b1693a3afb445a696"
 
   const hop = new Hop('goerli')
   const calldata = await hop.getMessageCalldata({
@@ -329,6 +329,45 @@ async function main() {
     messageId
   })
   console.log(calldata)
+}
+
+main().catch(console.error)
+```
+
+## Get Message Sent Event
+
+> Get full event log from message ID
+
+Method: `getMessageSentEventFromMessageId`
+
+### Parameters
+
+|Name|Type|Description|Example|
+|----|----|-----------|-------|
+|`fromChainId`|`number`|From chain ID|eg. `420`|
+|`messageId`|`string`|The `messageId` from the `MessageSent` event|eg. `0xf672a68db7ebbac6e28bc217967a83d5fc63f0f185a9c25b1693a3afb445a696`|
+
+### Response
+
+|Name|Type|Description|Example|
+|----|----|-----------|-------|
+|`event`|`object`|Message event log|eg. `{"messageId": "0xf672a68d...", "from": "0x651...", "toChainId": 5, ...}`|
+
+### Example
+
+```ts
+import { Hop } from '@hop-protocol/v2-sdk'
+
+async function main() {
+  const fromChainId = 420
+  const messageId = "0xf672a68db7ebbac6e28bc217967a83d5fc63f0f185a9c25b1693a3afb445a696"
+
+  const hop = new Hop('goerli')
+  const event = await hop.getMessageSentEventFromMessageId({
+    fromChainId,
+    messageId
+  })
+  console.log(event)
 }
 
 main().catch(console.error)
