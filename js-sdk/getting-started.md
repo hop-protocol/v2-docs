@@ -225,7 +225,7 @@ Method: `getBundleExitPopulatedTx`
 
 |Name|Type|Description|Example|
 |----|----|-----------|-------|
-|`fromChainId`|`number`|From chain ID|eg. `420`|
+|`fromChainId`|`number`|The origin chain of the message route.|eg. `420`|
 |`bundleCommittedTransactionHash`|`string`|The transaction hash that has the `BundleCommitted` event of the bundleId to exit.|eg. `0xf7aa4bccf0ffe34d76ceb1f18864a2dbfd590bdfca44ad29a316079559327020`|
 
 ### Response
@@ -251,6 +251,45 @@ async function main() {
     bundleCommittedTransactionHash
   })
   console.log(txData)
+}
+
+main().catch(console.error)
+```
+
+## Get Message ID
+
+> Get Message ID from transaction hash.
+
+Method: `getMessageIdFromTransactionHash`
+
+### Parameters
+
+|Name|Type|Description|Example|
+|----|----|-----------|-------|
+|`fromChainId`|`number`|The origin chain of the message.|eg. `420`|
+|`transactionHash`|`string`|The tx hash that contains the `MessageSent` event.|eg. `0xdccaf2fc42186d66f72869ecb12b0be1f9b9c018a43a13f4ff32ee3eaa0d943c`|
+
+### Response
+
+|Name|Type|Description|Example|
+|----|----|-----------|-------|
+|`messageId`|`string`|Message ID|eg. `0xf672a68db7ebbac6e28bc217967a83d5fc63f0f185a9c25b1693a3afb445a696`|
+
+### Example
+
+```ts
+import { Hop } from '@hop-protocol/v2-sdk'
+
+async function main() {
+  const fromChainId = 420
+  const transactionHash = "0xdccaf2fc42186d66f72869ecb12b0be1f9b9c018a43a13f4ff32ee3eaa0d943c"
+
+  const hop = new Hop('goerli')
+  const messageId = await hop.getMessageIdFromTransactionHash({
+    fromChainId,
+    transactionHash
+  })
+  console.log(messageId)
 }
 
 main().catch(console.error)
