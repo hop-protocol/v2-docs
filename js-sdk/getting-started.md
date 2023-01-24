@@ -73,6 +73,15 @@ Parameters:
 |`toAddress`|`string`|The address to call at the destination|eg. `0x5f335A890bbB5Cd1a4a7f7A1C8F9F6F75efDCA89`|
 |`toCalldata`|`string`|The tx calldata to call at the destination address|eg. `0x812448a5000000000000000000000000000000000000000000000000000000000000002a`|
 
+Response:
+
+|Name|Type|Description|Example|
+|----|----|-----------|-------|
+|`data`|`string`|Calldata|eg. `0x7056f41f00...`|
+|`to`|`string`|Address|eg. `0xeA35E10f763ef2FD5634dF9Ce9ad00434813bddB`|
+|`chainId`|`number`|Origin chain ID|eg. `420`|
+|`value`|`string`|Message fee value as wei|eg. `1000000000000`|
+
 Example
 
 ```ts
@@ -92,6 +101,52 @@ async function main() {
     toCalldata
   })
   console.log(txData)
+}
+
+main().catch(console.error)
+```
+
+## Get Bundle Proof
+
+> Get bundle proof needed to relay message at destination chain.
+
+Use this method to get the bundle proof JSON.
+
+Method: `getBundleProofFromMessageId`
+
+Parameters:
+
+|Name|Type|Description|Example|
+|----|----|-----------|-------|
+|`fromChainId`|`number`|From chain ID|eg. `420`|
+|`toChainId`|`number`|To chain ID|eg. `5`|
+|`messageId`|`string`|The message ID hash. This is emitted in the `MessageSent` event.|eg. `0xe8e4885871d370ef17693db9fc0f34bda218c8685a9bb3ab40648cf8d2a5358e`|
+
+Response:
+
+|Name|Type|Description|Example|
+|----|----|-----------|-------|
+|`bundleId`|`string`|Bundle ID|eg. `0x5e26c4282d410e7e0c892561566ce0a6522f4762de1fc59d9bfba068890d9f7d`|
+|`treeIndex`|`number`|Message tree index|eg. `2`|
+|`siblings`|`string[]`|Proof sibling nodes|eg. `["0xf672a68db7...", "0xb93f64fa40..."]`|
+|`totalLeaves`|`number`|Total leaves that make up root|eg. `4`|
+
+Example
+
+```ts
+import { Hop } from '@hop-protocol/v2-sdk'
+
+async function main() {
+  const fromChainId = 420
+  const toChainId = 5
+  const messageId = "0xe8e4885871d370ef17693db9fc0f34bda218c8685a9bb3ab40648cf8d2a5358e"
+
+  const hop = new Hop('goerli')
+  const bundleProof = await hop.getBundleProofFromMessageId({
+    fromChainId,
+    messageId
+  })
+  console.log(bundleProof)
 }
 
 main().catch(console.error)
