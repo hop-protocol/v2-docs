@@ -51,7 +51,50 @@ const { Hop } = require('@hop-protocol/v2-sdk')
 ```javascript
 import { Hop } from '@hop-protocol/v2-sdk'
 
-const hop = new Hop()
+const hop = new Hop('goerli')
+```
+
+Avaiable networks are only `goerli` at this time.
+
+## Send Message
+
+> Send a message from one chain to another chain.
+
+Use this method to get the populated transaction for sending a message.
+
+Method: `getSendMessagePopulatedTx`
+
+Parameters:
+
+|Name|Type|Description|Example|
+|----|----|-----------|-------|
+|`fromChainId`|`number`|From chain ID|eg. `420`|
+|`toChainId`|`number`|To chain ID|eg. `5`|
+|`toAddress`|`string`|The address to call at the destination|eg. `0x5f335A890bbB5Cd1a4a7f7A1C8F9F6F75efDCA89`|
+|`toCalldata`|`string`|The tx calldata to call at the destination address|eg. `0x812448a5000000000000000000000000000000000000000000000000000000000000002a`|
+
+Example
+
+```ts
+import { Hop } from '@hop-protocol/v2-sdk'
+
+async function main() {
+  const fromChainId = 420
+  const toChainId = 5
+  const toAddress = "0x5f335A890bbB5Cd1a4a7f7A1C8F9F6F75efDCA89"
+  const toCalldata = "0x812448a5000000000000000000000000000000000000000000000000000000000000002a"
+
+  const hop = new Hop('goerli')
+  const txData = await hop.getSendMessagePopulatedTx({
+    fromChainId,
+    toChainId,
+    toAddress,
+    toCalldata
+  })
+  console.log(txData)
+}
+
+main().catch(console.error)
 ```
 
 ### More examples
