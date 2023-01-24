@@ -373,6 +373,45 @@ async function main() {
 main().catch(console.error)
 ```
 
+## Get Message Fee
+
+> Get fee in wei required to send message
+
+Method: `getMessageFee`
+
+### Parameters
+
+|Name|Type|Description|Example|
+|----|----|-----------|-------|
+|`fromChainId`|`number`|The origin chain the message will be sent from.|eg. `420`|
+|`toChainId`|`number`|The destination chain for the message.|eg. `5`|
+
+### Response
+
+|Name|Type|Description|Example|
+|----|----|-----------|-------|
+|`value`|`string`|Message fee in wei|eg. `1000000000000`|
+
+### Example
+
+```ts
+import { Hop } from '@hop-protocol/v2-sdk'
+
+async function main() {
+  const hop = new Hop('goerli')
+  const fromChainId = 420
+  const toChainId = 5
+
+  const fee = await hop.getMessageFee({
+    fromChainId,
+    toChainId
+  })
+  console.log(fee)
+}
+
+main().catch(console.error)
+```
+
 ### More examples
 
 If you'd like to see more examples or have any feedback, message us on [Discord](https://discord.gg/PwCF88emV4)!
