@@ -213,6 +213,49 @@ async function main() {
 main().catch(console.error)
 ```
 
+## Exit Bundle
+
+> Exit bundle at the destination.
+
+Use this method to get the populated transaction for exiting a bundle.
+
+Method: `getBundleExitPopulatedTx`
+
+### Parameters
+
+|Name|Type|Description|Example|
+|----|----|-----------|-------|
+|`fromChainId`|`number`|From chain ID|eg. `420`|
+|`bundleCommittedTransactionHash`|`string`|The transaction hash that has the `BundleCommitted` event of the bundleId to exit.|eg. `0xf7aa4bccf0ffe34d76ceb1f18864a2dbfd590bdfca44ad29a316079559327020`|
+
+### Response
+
+|Name|Type|Description|Example|
+|----|----|-----------|-------|
+|`data`|`string`|Calldata|eg. `0x7ad7be77000000000...`|
+|`to`|`string`|Address|eg. `0xE3F4c0B210E7008ff5DE92ead0c5F6A5311C4FDC`|
+|`chainId`|`number`|Chain ID|eg. `5`|
+
+### Example
+
+```ts
+import { Hop } from '@hop-protocol/v2-sdk'
+
+async function main() {
+  const fromChainId = 420
+  const bundleCommittedTransactionHash = "0xf7aa4bccf0ffe34d76ceb1f18864a2dbfd590bdfca44ad29a316079559327020"
+
+  const hop = new Hop('goerli')
+  const txData = await hop.getBundleExitPopulatedTx({
+    fromChainId,
+    bundleCommittedTransactionHash
+  })
+  console.log(txData)
+}
+
+main().catch(console.error)
+```
+
 ### More examples
 
 If you'd like to see more examples or have any feedback, message us on [Discord](https://discord.gg/PwCF88emV4)!
