@@ -295,6 +295,45 @@ async function main() {
 main().catch(console.error)
 ```
 
+## Get Message Calldata
+
+> Get calldata of message given message ID
+
+Method: `getMessageCalldata`
+
+### Parameters
+
+|Name|Type|Description|Example|
+|----|----|-----------|-------|
+|`fromChainId`|`number`|The origin chain of the message.|eg. `420`|
+|`messageId`|`string`|The `messageId` from the `MessageSent` event|eg. `0xf672a68db7ebbac6e28bc217967a83d5fc63f0f185a9c25b1693a3afb445a696`|
+
+### Response
+
+|Name|Type|Description|Example|
+|----|----|-----------|-------|
+|`calldata`|`string`|Calldata of message|eg. `0x812448a5000000000000000000000000000000000000000000000000000000000000002a`|
+
+### Example
+
+```ts
+import { Hop } from '@hop-protocol/v2-sdk'
+
+async function main() {
+  const fromChainId = 420
+  const messageId = ""
+
+  const hop = new Hop('goerli')
+  const calldata = await hop.getMessageCalldata({
+    fromChainId,
+    messageId
+  })
+  console.log(calldata)
+}
+
+main().catch(console.error)
+```
+
 ### More examples
 
 If you'd like to see more examples or have any feedback, message us on [Discord](https://discord.gg/PwCF88emV4)!
