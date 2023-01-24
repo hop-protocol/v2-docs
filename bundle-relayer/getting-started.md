@@ -46,7 +46,7 @@ docker run \
 #### Flags
 
 |Name|Description|Example|
-|----|----|-----------|-------|
+|----|-----------|-------|
 |`--server`|Enable API server.|eg. `--server`|
 |`--indexer-poll-seconds`|The number of seconds to wait between indexer polls.|eg. `--indexer-poll-seconds 10`|
 |`--exit-bundle-poll-seconds`|The number of seconds to wait between exit bundle polls.|eg. `--indexer-poll-seconds 10`|
