@@ -6,5 +6,6 @@
   * [API Reference](js-sdk/api-reference.md)
 * [Bundle Relayer](bundle-relayer/README.md)
   * [Getting started](hop-node/getting-started.md)
+  * [Installing Docker](hop-node/installing-docker.md)
 * [Smart Contracts](smart-contracts/README.md)
   * [Contract Addresses](contract-addresses.md)
