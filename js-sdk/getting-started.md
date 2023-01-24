@@ -84,7 +84,7 @@ Method: `getSendMessagePopulatedTx`
 
 ### Example
 
-```ts
+```javascript
 import { Hop } from '@hop-protocol/v2-sdk'
 
 async function main() {
@@ -133,7 +133,7 @@ Method: `getBundleProofFromMessageId`
 
 ### Example
 
-```ts
+```javascript
 import { Hop } from '@hop-protocol/v2-sdk'
 
 async function main() {
@@ -180,7 +180,7 @@ Method: `getRelayMessagePopulatedTx`
 
 ### Example
 
-```ts
+```javascript
 import { Hop } from '@hop-protocol/v2-sdk'
 
 async function main() {
@@ -238,7 +238,7 @@ Method: `getBundleExitPopulatedTx`
 
 ### Example
 
-```ts
+```javascript
 import { Hop } from '@hop-protocol/v2-sdk'
 
 async function main() {
@@ -277,7 +277,7 @@ Method: `getMessageIdFromTransactionHash`
 
 ### Example
 
-```ts
+```javascript
 import { Hop } from '@hop-protocol/v2-sdk'
 
 async function main() {
@@ -316,7 +316,7 @@ Method: `getMessageCalldata`
 
 ### Example
 
-```ts
+```javascript
 import { Hop } from '@hop-protocol/v2-sdk'
 
 async function main() {
@@ -355,7 +355,7 @@ Method: `getMessageSentEventFromMessageId`
 
 ### Example
 
-```ts
+```javascript
 import { Hop } from '@hop-protocol/v2-sdk'
 
 async function main() {
@@ -394,7 +394,7 @@ Method: `getMessageFee`
 
 ### Example
 
-```ts
+```javascript
 import { Hop } from '@hop-protocol/v2-sdk'
 
 async function main() {
@@ -435,7 +435,7 @@ Method: `getEvents`
 
 ### Example
 
-```ts
+```javascript
 import { Hop } from '@hop-protocol/v2-sdk'
 
 async function main() {
@@ -477,7 +477,7 @@ Method: `setContractAddresses`
 
 ### Example
 
-```ts
+```javascript
 import { Hop } from '@hop-protocol/v2-sdk'
 
 async function main() {
@@ -518,14 +518,13 @@ Method: `getContractAddresses`
 
 |Name|Type|Description|Example|
 |----|----|-----------|-------|
-|----|----|-----------|-------|
 |`chainId`|`number`|Chain ID of messenger contract.|eg. `420`|
 |`startBlock`|`number`|Block contract was deployed at. This is used as start block when fetching events.|eg. `420`|
 |`spokeCoreMessenger`|`string`|The address of the SpokeCoreMessenger contract.|eg. `0xE3F4c0B210E7008ff5DE92ead0c5F6A5311C4FDC`|
 
 ### Example
 
-```ts
+```javascript
 import { Hop } from '@hop-protocol/v2-sdk'
 
 async function main() {
@@ -556,7 +555,7 @@ Method: `setRpcProviders`
 
 ### Example
 
-```ts
+```javascript
 import { Hop } from '@hop-protocol/v2-sdk'
 
 async function main() {
