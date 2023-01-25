@@ -2,12 +2,12 @@
 
 Welcome to the Hop Protocol v2 documentation!
 
-{% content-ref url="js-sdk/js-sdk.md" %}
-[js-sdk.md](js-sdk/js-sdk.md)
+{% content-ref url="js-sdk/" %}
+[js-sdk](js-sdk/)
 {% endcontent-ref %}
 
-{% content-ref url="bundle-relayer/bundle-relayer.md" %}
-[bundle-relayer.md](bundle-relayer/bundle-relayer.md)
+{% content-ref url="bundle-relayer/" %}
+[bundle-relayer](bundle-relayer/)
 {% endcontent-ref %}
 
 ### Looking for the v1 Docs?
