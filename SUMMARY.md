@@ -8,4 +8,4 @@
   * [Getting started](bundle-relayer/getting-started.md)
   * [Installing Docker](bundle-relayer/installing-docker.md)
 * [Smart Contracts](smart-contracts/README.md)
-  * [Contract Addresses](contract-addresses.md)
+  * [Contract Addresses](smart-contracts/contract-addresses.md)
