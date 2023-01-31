@@ -2,12 +2,16 @@
 
 Welcome to the Hop Protocol v2 documentation!
 
-{% content-ref url="js-sdk/" %}
-[js-sdk](js-sdk/)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
-{% content-ref url="bundle-relayer/" %}
-[bundle-relayer](bundle-relayer/)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
+
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 ### Looking for the v1 Docs?
