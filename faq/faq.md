@@ -18,4 +18,19 @@ In v2, anyone can become a Bonder by running the Hop Node. The bonder network wi
 
 ## What is the utility for Hop token in v2?
 
-More details on this will be released soon.
+_More details on this will be released soon._
+
+
+
+## Where can I find the code for Hop v2?
+
+* Monorepo: [https://github.com/hop-protocol/hop](https://github.com/hop-protocol/hop)
+* Contracts: [https://github.com/hop-protocol/contracts-v2](https://github.com/hop-protocol/contracts-v2)
+
+
+
+## What's the best way to keep up with Hop?
+
+* Join our [Discord](https://discord.gg/PwCF88emV4)
+* Visit our [GitHub](https://github.com/hop-protocol/hop)
+* Follow us on [Twitter](https://twitter.com/HopProtocol)

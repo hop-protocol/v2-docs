@@ -28,6 +28,6 @@
 
 * [Whitepaper PDF](whitepaper/whitepaper-pdf.md)
 
-## Group 1
+## faq
 
-* [FAQ](group-1/faq.md)
+* [FAQ](faq/faq.md)
