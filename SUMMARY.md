@@ -8,7 +8,7 @@
 * [Getting started](js-sdk/getting-started.md)
 * [API Reference](js-sdk/api-reference.md)
 
-## Bundle Relayer
+## Hop Node <a href="#bundle-relayer" id="bundle-relayer"></a>
 
 * [Welcome](bundle-relayer/README.md)
 * [Getting started](bundle-relayer/getting-started.md)

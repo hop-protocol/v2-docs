@@ -6,8 +6,8 @@ Note: The Hop v2 protocol and docs are still a work-in-progress and only on test
 
 _Looking for the v1 Docs?_ The Hop v1 docs are for the current version of Hop.
 
-{% content-ref url="http://localhost:5000/o/z99xBMPJtczzz1HiPNOe/s/-MOYaoULYuKq7wLWewmU/" %}
-[Developer Docs v1](http://localhost:5000/o/z99xBMPJtczzz1HiPNOe/s/-MOYaoULYuKq7wLWewmU/)
+{% content-ref url="https://app.gitbook.com/o/z99xBMPJtczzz1HiPNOe/s/-MOYaoULYuKq7wLWewmU/" %}
+[Developer Docs v1](https://app.gitbook.com/o/z99xBMPJtczzz1HiPNOe/s/-MOYaoULYuKq7wLWewmU/)
 {% endcontent-ref %}
 
 ### Hop Core Messenger
@@ -48,13 +48,13 @@ Faster messaging models such as collateralized messaging and optimistic messagin
 
 The Hop v1 docs are for the current version of Hop.
 
-{% content-ref url="http://localhost:5000/o/z99xBMPJtczzz1HiPNOe/s/-MOYaoULYuKq7wLWewmU/" %}
-[Developer Docs v1](http://localhost:5000/o/z99xBMPJtczzz1HiPNOe/s/-MOYaoULYuKq7wLWewmU/)
+{% content-ref url="https://app.gitbook.com/o/z99xBMPJtczzz1HiPNOe/s/-MOYaoULYuKq7wLWewmU/" %}
+[Developer Docs v1](https://app.gitbook.com/o/z99xBMPJtczzz1HiPNOe/s/-MOYaoULYuKq7wLWewmU/)
 {% endcontent-ref %}
 
 ### Looking for User Docs?
 
-{% content-ref url="http://localhost:5000/o/z99xBMPJtczzz1HiPNOe/s/libLZBZV7uqIA565p5dQ/" %}
-[User Docs](http://localhost:5000/o/z99xBMPJtczzz1HiPNOe/s/libLZBZV7uqIA565p5dQ/)
+{% content-ref url="https://app.gitbook.com/o/z99xBMPJtczzz1HiPNOe/s/libLZBZV7uqIA565p5dQ/" %}
+[User Docs](https://app.gitbook.com/o/z99xBMPJtczzz1HiPNOe/s/libLZBZV7uqIA565p5dQ/)
 {% endcontent-ref %}
 

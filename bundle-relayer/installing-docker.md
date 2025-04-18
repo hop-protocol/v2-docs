@@ -1,12 +1,6 @@
----
-description: Install Docker service on server
----
-
 # Installing Docker
 
-Official Docker install [Instructions here](https://docs.docker.com/config/daemon/systemd/).
-
-Instructions on installing docker on an Ubuntu server:
+The first step is to install Docker on your server. The official Docker install [Instructions are here](https://docs.docker.com/config/daemon/systemd/). A concise version of the instructions for installing Docker on an Ubuntu server are below:
 
 ```bash
 sudo apt-get update
