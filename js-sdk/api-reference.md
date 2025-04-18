@@ -1,9 +1,14 @@
 ---
-description: ⚠️ JavaScript SDK is in beta
+description: Hop v2 JS SDK API Reference
 ---
 
 # API Reference
 
-API Reference has been moved to [github](https://github.com/hop-protocol/v2-monorepo/tree/develop/packages/v2-sdk/docs).
+The Hop v2 JavaScript SDK API Reference can be found at:
 
-See: [https://github.com/hop-protocol/v2-monorepo/tree/develop/packages/v2-sdk/docs](https://github.com/hop-protocol/v2-monorepo/tree/develop/packages/v2-sdk/docs)
+{% embed url="https://v2-sdk-docs.hop.exchange/" %}
+
+The generated documentation is also available on GitHub at:
+
+{% embed url="https://github.com/hop-protocol/hop-private/blob/v2/packages/v2-sdk/docs/modules.md" %}
+
