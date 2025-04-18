@@ -7,6 +7,7 @@
 * [Welcome](js-sdk/README.md)
 * [Getting started](js-sdk/getting-started.md)
 * [API Reference](js-sdk/api-reference.md)
+* [Playground](js-sdk/playground.md)
 
 ## Hop Node
 
