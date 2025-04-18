@@ -27,3 +27,7 @@
 ## Whitepaper
 
 * [Whitepaper PDF](whitepaper/whitepaper-pdf.md)
+
+## Group 1
+
+* [FAQ](group-1/faq.md)
