@@ -23,3 +23,7 @@
 ## Explorer
 
 * [Explorer links](explorer/explorer-links.md)
+
+## Whitepaper
+
+* [Whitepaper PDF](whitepaper/whitepaper-pdf.md)
