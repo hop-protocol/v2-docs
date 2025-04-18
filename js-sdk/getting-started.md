@@ -271,13 +271,6 @@ await withdrawClaimTx.wait()
 
 ### Additional Functions
 
-#### Get Available Routes
-
-```typescript
-// Get all available paths for a token
-const paths = await hop.getAllRailsPathAddresses(fromChainId)
-```
-
 #### Calculate Fees
 
 ```typescript
