@@ -8,11 +8,11 @@ description: Getting started with the v2 Hop Node
 
 Make sure docker daemon is running if not already.
 
+Learn how to install Docker here:
 
-
-
-
-
+{% content-ref url="installing-docker.md" %}
+[installing-docker.md](installing-docker.md)
+{% endcontent-ref %}
 
 ### Install docker image
 

@@ -8,11 +8,11 @@
 * [Getting started](js-sdk/getting-started.md)
 * [API Reference](js-sdk/api-reference.md)
 
-## Hop Node <a href="#bundle-relayer" id="bundle-relayer"></a>
+## Hop Node
 
-* [Welcome](bundle-relayer/README.md)
-* [Getting started](bundle-relayer/getting-started.md)
-* [Installing Docker](bundle-relayer/installing-docker.md)
+* [Welcome](hop-node/bundle-relayer.md)
+* [Getting started](hop-node/getting-started.md)
+* [Installing Docker](hop-node/installing-docker.md)
 
 ## Smart Contracts
 
